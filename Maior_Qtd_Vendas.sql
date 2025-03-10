@@ -1,0 +1,2 @@
+-- Qual foi a maior venda do produto "Linha Refrescante - 1 Litro - Morango/Limao" em quantidade?
+SELECT TOP 1 * FROM SUCOS_FRUTAS.DBO.ITENS_NOTAS_FISCAIS WHERE CODIGO_DO_PRODUTO = (SELECT CODIGO_DO_PRODUTO FROM SUCOS_FRUTAS.DBO.TABELA_DE_PRODUTOS WHERE NOME_DO_PRODUTO = 'Linha Refrescante - 1 Litro - Morango/Limao') ORDER BY QUANTIDADE DESC;
